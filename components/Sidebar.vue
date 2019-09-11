@@ -71,6 +71,10 @@ export default {
       > p {
         margin-left: 10px;
       }
+
+      &:hover {
+        background-color: var(--accent);
+      }
     }
 
     .active {
