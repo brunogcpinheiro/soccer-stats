@@ -30,10 +30,15 @@ export default {
   padding: 0;
   box-sizing: border-box;
   outline: var(--accent);
+  font-family: Lexend Deca, sans-serif;
 }
 
 ul {
   list-style: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 #layout {

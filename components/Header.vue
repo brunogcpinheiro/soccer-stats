@@ -12,8 +12,8 @@
       <li>Contacts</li>
     </ul>
     <div class="login">
-      <button>Login</button>
-      <button>Signup</button>
+      <button>Log in</button>
+      <button>Sign up</button>
     </div>
   </header>
 </template>
@@ -22,14 +22,43 @@
 header {
   display: flex;
   align-items: center;
+  padding: 20px;
 }
 
 .logo {
   h2 {
     font-family: Russo One, sans-serif;
+    margin: 0;
+    padding: 0;
 
     span {
+      font-family: Russo One, sans-serif;
       color: var(--accent);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+}
+
+.login {
+  button {
+    border: none;
+    border-bottom: 2px solid #040607;
+    background: var(--background-contrast);
+    border-radius: 2px;
+    padding: 7px 18px;
+    color: var(--foreground);
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:last-child {
+      margin-left: 10px;
+      background-color: var(--accent);
     }
   }
 }
