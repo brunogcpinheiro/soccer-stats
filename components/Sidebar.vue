@@ -6,7 +6,7 @@
       <h5>Navigation</h5>
       <ul>
         <li v-for="({ route, title, active, icon }) in menu" :key="route" :class="{active}">
-          <img width="24" height="24" src="~assets/home.svg" :alt="title">
+          <img width="24" height="24" :src="icon" :alt="title">
           <p>{{ title }}</p>
         </li>
       </ul>
@@ -16,6 +16,9 @@
 
 <script>
 import SearchBox from "@/components/SearchBox.vue";
+import home from "@/assets/home.svg";
+import live from "@/assets/play-circle-fill.svg";
+import favorites from "@/assets/star-fill.svg";
 
 export default {
   components: {
@@ -26,17 +29,20 @@ export default {
       {
         route: "/",
         title: "Home",
-        active: true
+        active: true,
+        icon: home
       },
       {
         route: "/live",
         title: "Live",
-        active: false
+        active: false,
+        icon: live
       },
       {
         route: "/favorites",
         title: "Favorites",
-        active: false
+        active: false,
+        icon: favorites
       }
     ]
   })
