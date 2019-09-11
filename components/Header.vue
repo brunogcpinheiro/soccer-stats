@@ -7,9 +7,7 @@
       </h2>
     </div>
     <ul class="menu">
-      <li>Stats</li>
-      <li>Live</li>
-      <li>Contacts</li>
+      <li v-for="({ route, title, active }) in menu" :key="route" :class="{active}">{{ title }}</li>
     </ul>
     <div class="login">
       <button>Log in</button>
@@ -18,11 +16,36 @@
   </header>
 </template>
 
+<script>
+export default {
+  data: () => ({
+    menu: [
+      {
+        route: "/",
+        title: "Games",
+        active: true
+      },
+      {
+        route: "/live",
+        title: "Live",
+        active: false
+      },
+      {
+        route: "/contacts",
+        title: "Contacts",
+        active: false
+      }
+    ]
+  })
+};
+</script>
+
+
 <style lang="scss" scoped>
 header {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .logo {
@@ -34,6 +57,7 @@ header {
     span {
       font-family: Russo One, sans-serif;
       color: var(--accent);
+      font-weight: bold;
     }
   }
 }
@@ -41,8 +65,18 @@ header {
 .menu {
   display: flex;
   align-items: center;
-
   flex: 1;
+
+  > li {
+    margin-left: 50px;
+    cursor: pointer;
+    color: var(--foreground-contrast);
+  }
+
+  .active {
+    color: var(--foreground);
+    font-weight: bold;
+  }
 }
 
 .login {

@@ -1,6 +1,6 @@
 <template>
   <div id="layout">
-    <aside></aside>
+    <Sidebar/>
     <Header/>
 
     <main>
@@ -11,10 +11,12 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import Sidebar from "@/components/Sidebar.vue";
 
 export default {
   components: {
-    Header
+    Header,
+    Sidebar
   }
 };
 </script>
@@ -62,10 +64,6 @@ button {
   }
   section#action-bar {
     grid-area: sidebar;
-  }
-
-  .container {
-    padding: 20px;
   }
 }
 </style>
