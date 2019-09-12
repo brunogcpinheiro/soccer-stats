@@ -82,7 +82,7 @@ header {
 .login {
   button {
     border: none;
-    border-bottom: 2px solid #040607;
+    border-bottom: 2px solid var(--shined);
     background: var(--background-contrast);
     border-radius: 2px;
     padding: 7px 18px;
@@ -93,6 +93,10 @@ header {
     &:last-child {
       margin-left: 10px;
       background-color: var(--accent);
+    }
+
+    &:hover {
+      animation: pulse 0.5s ease-in;
     }
   }
 }

@@ -5,8 +5,22 @@
     <nav class="menu">
       <h5>Navigation</h5>
       <ul>
-        <li v-for="({ route, title, active, icon }) in menu" :key="route" :class="{active}">
+        <li
+          v-for="({ route, title, active, icon }) in menuNavigation"
+          :key="route"
+          :class="{active}"
+        >
           <img width="24" height="24" :src="icon" :alt="title">
+          <p>{{ title }}</p>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="menu">
+      <h5>Sports</h5>
+      <ul>
+        <li v-for="({ route, title, active, icon }) in menuSports" :key="route" :class="{active}">
+          <img width="20" height="20" :src="icon" :alt="title">
           <p>{{ title }}</p>
         </li>
       </ul>
@@ -19,13 +33,14 @@ import SearchBox from "@/components/SearchBox.vue";
 import home from "@/assets/home.svg";
 import live from "@/assets/play-circle-fill.svg";
 import favorites from "@/assets/star-fill.svg";
+import soccer from "@/assets/football.svg";
 
 export default {
   components: {
     SearchBox
   },
   data: () => ({
-    menu: [
+    menuNavigation: [
       {
         route: "/",
         title: "Home",
@@ -44,6 +59,14 @@ export default {
         active: false,
         icon: favorites
       }
+    ],
+    menuSports: [
+      {
+        route: "/soccer",
+        title: "Soccer",
+        active: false,
+        icon: soccer
+      }
     ]
   })
 };
@@ -59,6 +82,7 @@ export default {
     h5 {
       margin: 30px 0 20px 20px;
       font-size: 0.875rem;
+      color: var(--accent-contrast);
     }
 
     li {
@@ -69,6 +93,8 @@ export default {
       border-radius: 5px;
       margin: 20px 0;
       cursor: pointer;
+      overflow: hidden;
+      animation: none;
 
       > img {
         margin-left: 20px;
@@ -80,6 +106,7 @@ export default {
 
       &:hover {
         background-color: var(--accent);
+        animation: pulse 0.5s ease-in;
       }
     }
 

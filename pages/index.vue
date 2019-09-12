@@ -1,11 +1,18 @@
 <template>
-  <div class="container">
-    <h2>Hello World!!!</h2>
+  <div class="main">
+    <Jumbotron/>
   </div>
 </template>
 
 <script>
+import Jumbotron from "@/components/Jumbotron.vue";
+
+export default {
+  components: {
+    Jumbotron
+  }
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

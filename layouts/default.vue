@@ -27,6 +27,21 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Lexend+Deca:300,400,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 var(--accent);
+    box-shadow: 0 0 0 0 var(--accent);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 2px var(--accent);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 var(--accent);
+    box-shadow: 0 0 0 0 var(--accent);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +63,7 @@ button {
   color: var(--foreground);
   font-family: Lexend Deca, sans-serif;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 3fr;
   grid-template-rows: 70px calc(100vh - 70px);
   grid-template-areas:
     "header header header"
