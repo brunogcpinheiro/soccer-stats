@@ -28,7 +28,7 @@
   justify-content: space-between;
 
   .info {
-    flex: 4;
+    flex: 3;
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -40,13 +40,13 @@
     }
 
     h4 {
-      font-size: 3rem;
+      font-size: 2rem;
       color: var(--shined);
       flex: 1;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
 
       span {
         color: var(--shined);

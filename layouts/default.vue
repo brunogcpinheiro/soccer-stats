@@ -63,7 +63,7 @@ button {
   color: var(--foreground);
   font-family: Lexend Deca, sans-serif;
   display: grid;
-  grid-template-columns: 1fr 4fr 3fr;
+  grid-template-columns: 1fr 5fr 2fr;
   grid-template-rows: 70px calc(100vh - 70px);
   grid-template-areas:
     "header header header"

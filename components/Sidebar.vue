@@ -76,7 +76,7 @@ export default {
 #sidebar {
   width: 100%;
   height: 100%;
-  padding: 25px;
+  padding: 25px 10px;
 
   .menu {
     h5 {
