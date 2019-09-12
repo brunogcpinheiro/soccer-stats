@@ -2,7 +2,7 @@
   <header>
     <div class="logo">
       <h2>
-        Soccer
+        Sports
         <span>Stats</span>
       </h2>
     </div>

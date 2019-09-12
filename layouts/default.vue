@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss">
 @import "~assets/vars.scss";
-@import url("https://fonts.googleapis.com/css?family=Lexend+Deca:300,400,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca:100,300,400,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 
 @keyframes pulse {

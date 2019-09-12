@@ -3,10 +3,14 @@
     <div class="info">
       <h1>Best player of the round!</h1>
       <p>27 gols and 4 assistances in this season!</p>
+      <div class="team">
+        <img src="~assets/juventus.svg" alt="Team of the best player">
+        <p>Juventus F.C</p>
+      </div>
       <h4>Cristiano Ronaldo</h4>
       <h2>
-        Overall:
-        <span>95</span>
+        Score:
+        <span>9/10</span>
       </h2>
     </div>
     <div class="player">
@@ -19,7 +23,6 @@
 .box {
   background-color: var(--accent);
   width: 100%;
-  margin: 25px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -36,14 +39,10 @@
       font-family: Russo one, sans-serif;
     }
 
-    p {
-      flex: 3;
-    }
-
     h4 {
       font-size: 3rem;
       color: var(--shined);
-      flex: 2;
+      flex: 1;
     }
 
     h2 {
@@ -51,6 +50,23 @@
 
       span {
         color: var(--shined);
+      }
+    }
+
+    .team {
+      flex: 2;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 30px;
+        fill: #fff;
+      }
+
+      p {
+        margin-left: 10px;
+        font-weight: bold;
       }
     }
   }
