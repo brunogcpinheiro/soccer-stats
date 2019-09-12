@@ -26,7 +26,7 @@
 
   .info {
     flex: 4;
-    margin: 50px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -37,12 +37,13 @@
     }
 
     p {
-      flex: 2;
+      flex: 3;
     }
 
     h4 {
       font-size: 3rem;
       color: var(--shined);
+      flex: 2;
     }
 
     h2 {
@@ -60,9 +61,9 @@
     flex: 1;
 
     img {
-      width: 250px;
+      width: 240px;
       float: right;
-      margin-top: -50px;
+      margin-top: -30px;
     }
   }
 }
