@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Jumbotron/>
-    <ListMatches />
+    <ListMatches/>
   </div>
 </template>
 

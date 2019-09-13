@@ -6,17 +6,21 @@
     <main>
       <Nuxt/>
     </main>
+
+    <MatchDetail/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import Sidebar from "@/components/Sidebar.vue";
+import MatchDetail from "@/components/MatchDetail.vue";
 
 export default {
   components: {
     Header,
-    Sidebar
+    Sidebar,
+    MatchDetail
   }
 };
 </script>
@@ -77,7 +81,7 @@ button {
   main {
     grid-area: main;
   }
-  section#action-bar {
+  section {
     grid-area: sidebar;
   }
 }
