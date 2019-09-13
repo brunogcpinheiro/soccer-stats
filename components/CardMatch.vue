@@ -2,7 +2,7 @@
   <div class="hvr-reveal main">
     <div class="league">
       <img :src="leagueIcon" alt="League">
-      <small>Premier League</small>
+      <small>{{leagueName}}</small>
       <div class="badge">
         <p>LIVE</p>
       </div>
@@ -43,6 +43,10 @@
 export default {
   props: {
     leagueIcon: {
+      type: String,
+      required: true
+    },
+    leagueName: {
       type: String,
       required: true
     },
@@ -95,7 +99,7 @@ export default {
   bottom: 0;
   border-color: var(--accent);
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   -webkit-transition-property: border-width;
   transition-property: border-width;
   -webkit-transition-duration: 0.1s;
@@ -131,8 +135,8 @@ export default {
   align-items: center;
 
   img {
-    width: 14px;
-    height: 14px;
+    width: 36px;
+    height: 36px;
   }
   small {
     color: var(--foreground-contrast);
@@ -167,6 +171,7 @@ export default {
 
     img {
       width: 100%;
+      height: 100%;
     }
   }
 }

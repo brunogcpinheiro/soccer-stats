@@ -7,7 +7,7 @@
 
     <div class="cards-list">
       <CardMatch
-        v-for="({ id, homeName, awayName, homeScore, awayScore, homeIcon, awayIcon, leagueIcon }) in matches"
+        v-for="({ id, homeName, awayName, homeScore, awayScore, homeIcon, awayIcon, leagueIcon, leagueName, active }) in matches"
         :key="id"
         :homeTeamName="homeName"
         :awayTeamName="awayName"
@@ -16,6 +16,8 @@
         :homeTeamIcon="homeIcon"
         :awayTeamIcon="awayIcon"
         :leagueIcon="leagueIcon"
+        :leagueName="leagueName"
+        :class="{active}"
       />
     </div>
   </div>
@@ -24,12 +26,13 @@
 <script>
 import CardMatch from "@/components/CardMatch.vue";
 import PremierLeague from "@/assets/premier.svg";
+import LaLigaLeague from "@/assets/LaLiga.svg";
 import City from "@/assets/city.svg";
 import United from "@/assets/man-united.svg";
-import Arsenal from "@/assets/arsenal.svg";
-import Leicester from "@/assets/leicester.svg";
 import Liverpool from "@/assets/liverpool.svg";
 import Chelsea from "@/assets/chelsea.svg";
+import Barcelona from "@/assets/barcelona.svg";
+import RealMadrid from "@/assets/real-madrid.svg";
 
 export default {
   components: {
@@ -38,14 +41,40 @@ export default {
   data: () => ({
     matches: [
       {
-        id: "1",
+        id: Math.random(),
         homeName: "Manchester City",
         awayName: "Manchester United",
         homeScore: "3",
         awayScore: "1",
         homeIcon: City,
         awayIcon: United,
-        leagueIcon: PremierLeague
+        leagueIcon: PremierLeague,
+        leagueName: "Premier League",
+        active: true
+      },
+      {
+        id: Math.random(),
+        homeName: "Liverpool",
+        awayName: "Chelsea",
+        homeScore: "2",
+        awayScore: "0",
+        homeIcon: Liverpool,
+        awayIcon: Chelsea,
+        leagueIcon: PremierLeague,
+        leagueName: "Premier League",
+        active: false
+      },
+      {
+        id: Math.random(),
+        homeName: "Barcelona",
+        awayName: "Real Madrid",
+        homeScore: "4",
+        awayScore: "1",
+        homeIcon: Barcelona,
+        awayIcon: RealMadrid,
+        leagueIcon: LaLigaLeague,
+        leagueName: "La Liga",
+        active: false
       }
     ]
   })
@@ -73,6 +102,10 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 20px 0;
+}
+
+.active {
+  border: 2px solid var(--accent);
 }
 </style>
 
